@@ -6,7 +6,7 @@ exit 1
 fi
 for adr in 1.1.1.1 8.8.8.8 10.255.255.1
 do
-if ping -c 1 "$adr" >> "$1" 2>&1 
+if ping -c 1 "$adr" > /dev/null 2>&1 
 then
 echo "$adr OK" >> "$1" 2>&1
 else
