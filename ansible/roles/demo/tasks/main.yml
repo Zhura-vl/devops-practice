@@ -1,0 +1,12 @@
+    - name: istall
+      apt:
+        name: tree
+        state: present
+    - name: add_directory
+      file:
+        path: /opt/demo
+        state: directory
+    - name: add_file
+      copy:
+        dest: /opt/demo/hello.txt
+        content: Hello from ansible
